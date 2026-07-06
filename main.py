@@ -1,37 +1,11 @@
-from src.pdf_loader import PDFLoader
-from src.text_splitter import TextSplitter
-from src.embeddings import EmbeddingModel
-from src.vector_store import VectorStore
+from src.chat_engine import ChatEngine
 
+engine = ChatEngine()
 
-loader = PDFLoader()
-text = loader.extract_text("data/sample.pdf")
-
-splitter = TextSplitter()
-chunks = splitter.split_text(text)
-
-embedder = EmbeddingModel()
-
-vector_db = VectorStore(embedder)
-
-vector_db.create_vector_store(chunks)
-
-vector_db.save()
-
-print("FAISS index created successfully!")
+engine.load_pdf("data/sample.pdf")
 
 question = "Who is the student?"
 
-results = vector_db.similarity_search(question)
+answer = engine.ask(question)
 
-from src.llm import GeminiLLM
-
-llm = GeminiLLM()
-
-answer = llm.generate_answer(
-    question,
-    results
-)
-
-print("\nAnswer:\n")
 print(answer)

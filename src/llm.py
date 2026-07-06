@@ -7,26 +7,20 @@ load_dotenv()
 
 
 class GeminiLLM:
-
     def __init__(self):
         self.llm = ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
             google_api_key=os.getenv("GOOGLE_API_KEY"),
-            temperature=0.3
+            temperature=0.3,
         )
 
     def generate_answer(self, question, docs):
-
-        context = "\n\n".join(
-            [doc.page_content for doc in docs]
-        )
+        context = "\n\n".join([doc.page_content for doc in docs])
 
         prompt = f"""
-You are a helpful assistant.
+You are an AI assistant that answers questions ONLY from the provided context.
 
-Answer ONLY using the context below.
-
-If the answer is not found in the context, say:
+If the answer is not present in the context, reply:
 "I couldn't find that information in the uploaded documents."
 
 Context:
@@ -34,6 +28,8 @@ Context:
 
 Question:
 {question}
+
+Answer:
 """
 
         response = self.llm.invoke(prompt)
