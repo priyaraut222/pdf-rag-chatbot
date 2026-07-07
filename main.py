@@ -1,20 +1,67 @@
 from src.chat_engine import ChatEngine
+from src.export_utils import ChatExporter
+
+# =====================================================
+# INITIALIZE
+# =====================================================
 
 engine = ChatEngine()
 
-engine.load_pdfs([
-    "data/sample.pdf"
-])
+exporter = ChatExporter()
 
-question = "Who is the student?"
+# =====================================================
+# LOAD PDF(s)
+# =====================================================
 
-answer = engine.ask(question)
+engine.load_pdfs(
+    [
+        "data/sample.pdf"
+    ]
+)
 
-print(answer)
+print("\n✅ PDFs Loaded Successfully!\n")
 
-docs = engine.vector_db.similarity_search(question)
+# =====================================================
+# ASK QUESTION
+# =====================================================
 
-print("\nMetadata:\n")
+question = input("Ask a question: ")
 
-for doc in docs:
-    print(doc.metadata)
+result = engine.ask(question)
+
+print("\n========== ANSWER ==========\n")
+
+print(result["answer"])
+
+# =====================================================
+# SOURCES
+# =====================================================
+
+print("\n========== SOURCES ==========\n")
+
+for doc in result["sources"]:
+
+    print(
+        f"📄 {doc.metadata['source']} | Page {doc.metadata['page']}"
+    )
+
+# =====================================================
+# EXPORT CHAT
+# =====================================================
+
+history = [
+    {
+        "role": "user",
+        "content": question
+    },
+    {
+        "role": "assistant",
+        "content": result["answer"]
+    }
+]
+
+pdf_path = exporter.export_chat(history)
+
+print("\n========== CHAT EXPORTED ==========\n")
+
+print(pdf_path)
