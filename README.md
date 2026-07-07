@@ -49,19 +49,21 @@ The platform relies on a modular OOP pattern isolating processing state steps to
             ▼
 💻 Streamlit Premium Interface Output Workspace Rendering Engine
 
-🛠️ Tech Stack & Technical Blueprint
-Core Orchestration: LangChain (LangChain-Core, LangChain-Community)
+---
 
-Intelligence Layer: Google GenAI / langchain-google-genai (Model: gemini-2.5-flash)
+## 🛠️ Tech Stack & Technical Blueprint
 
-High-Performance Indexing: FAISS (Facebook AI Similarity Search)
+* **Core Orchestration:** LangChain (LangChain-Core, LangChain-Community)
+* **Intelligence Layer:** Google GenAI / `langchain-google-genai` (Model: `gemini-2.5-flash`)
+* **High-Performance Indexing:** FAISS (Facebook AI Similarity Search)
+* **File Deserialization Engine:** PyPDF / `pypdf` (Native coordinate text bounds recovery)
+* **Runtime Environment:** Streamlit web framework + Python `.env` configuration pattern
 
-File Deserialization Engine: PyPDF / pypdf (Native coordinate text bounds recovery)
+---
 
-Runtime Environment: Streamlit web framework + Python .env configuration pattern
+## 📦 File Layout Matrix
 
-📦 File Layout Matrix
-
+```text
 pdf-rag-chatbot/
 ├── .env                  # Protected API Credentials Configuration
 ├── app.py                # Main Streamlit Graphical Application Workspace
