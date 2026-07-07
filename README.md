@@ -52,25 +52,6 @@ The project demonstrates practical implementation of modern **LLM Engineering**,
 
 ---
 
-# 🌟 Why DocMind AI?
-
-Traditional PDF readers allow users to **search keywords**.
-
-DocMind AI allows users to **understand knowledge**.
-
-Instead of manually browsing hundreds of pages, users can:
-
-- 💬 Ask questions in natural language
-- 📚 Generate study material instantly
-- 📄 Summarize lengthy reports
-- ⚖️ Compare multiple documents
-- 🌍 Translate AI-generated responses
-- 📑 Verify every answer with source citations
-
-This transforms static documents into an intelligent, conversational knowledge system.
-
----
-
 # 🏗️ System Architecture
 
 ```mermaid
@@ -145,44 +126,6 @@ J[Grounded Response]
 
 ---
 
-# ⚙️ Request Processing Workflow
-
-```mermaid
-sequenceDiagram
-
-actor User
-
-participant UI as Streamlit UI
-
-participant Loader as PDF Loader
-
-participant Vector as FAISS
-
-participant LLM as Gemini
-
-User->>UI: Upload PDFs
-
-UI->>Loader: Extract Text
-
-Loader->>Loader: Split into Chunks
-
-Loader->>Vector: Store Embeddings
-
-User->>UI: Ask Question
-
-UI->>Vector: Similarity Search
-
-Vector-->>UI: Top-k Relevant Chunks
-
-UI->>LLM: Prompt + Context
-
-LLM-->>UI: AI Response
-
-UI-->>User: Answer + Sources
-```
-
----
-
 # 🧩 Application Architecture
 
 ```text
@@ -239,41 +182,6 @@ UI-->>User: Answer + Sources
 
 ---
 
-# 🧠 AI Workflow
-
-```text
-            PDF
-             │
-             ▼
-      Text Extraction
-             │
-             ▼
-      Intelligent Chunking
-             │
-             ▼
-     Embedding Generation
-             │
-             ▼
-      Vector Representation
-             │
-             ▼
-      Semantic Retrieval
-             │
-             ▼
-      Relevant Context
-             │
-             ▼
-      Gemini LLM Reasoning
-             │
-             ▼
-      AI Generated Answer
-             │
-             ▼
-     Source Attribution
-```
-
----
-
 # 💻 Tech Stack
 
 | Category | Technology |
@@ -289,24 +197,6 @@ UI-->>User: Answer + Sources
 | **Export Utility** | ReportLab |
 | **Environment Management** | UV |
 | **Version Control** | Git & GitHub |
-
----
-
-# 📊 Feature Comparison
-
-| Capability | Traditional PDF Reader | DocMind AI |
-|------------|-----------------------|-----------|
-| Read PDF | ✅ | ✅ |
-| Keyword Search | ✅ | ✅ |
-| Semantic Search | ❌ | ✅ |
-| Ask Questions in Natural Language | ❌ | ✅ |
-| Multi-PDF Understanding | ❌ | ✅ |
-| AI Generated Summaries | ❌ | ✅ |
-| Study Notes Generation | ❌ | ✅ |
-| Cross Document Comparison | ❌ | ✅ |
-| Multilingual Translation | ❌ | ✅ |
-| Source Citation | ❌ | ✅ |
-| Export AI Conversations | ❌ | ✅ |
 
 ---
 
@@ -538,19 +428,6 @@ http://localhost:8501
 
 ---
 
-# ☁️ Deployment
-
-DocMind AI can be deployed on multiple cloud platforms.
-
-| Platform | Status |
-|----------|--------|
-| Streamlit Community Cloud | ✅ |
-| Render | ✅ |
-| Railway | ✅ |
-| HuggingFace Spaces | ✅ |
-| Docker | 🚧 Planned |
-
----
 
 # 📸 Application Preview
 
@@ -627,68 +504,6 @@ DocMind AI incorporates several optimization strategies to improve efficiency an
 
 ---
 
-# 🧪 Example Workflow
-
-```text
-📄 Upload PDFs
-
-        │
-
-        ▼
-
-📖 Extract Text
-
-        │
-
-        ▼
-
-✂️ Split into Chunks
-
-        │
-
-        ▼
-
-🧠 Generate Embeddings
-
-        │
-
-        ▼
-
-🗄 Store in FAISS
-
-        │
-
-        ▼
-
-💬 Ask Question
-
-        │
-
-        ▼
-
-🔍 Retrieve Similar Chunks
-
-        │
-
-        ▼
-
-🤖 Google Gemini
-
-        │
-
-        ▼
-
-📑 Context-aware Response
-
-        │
-
-        ▼
-
-📄 Source Citation
-```
-
----
-
 # 📌 Project Roadmap
 
 ## Completed
@@ -725,21 +540,6 @@ DocMind AI incorporates several optimization strategies to improve efficiency an
 
 ---
 
-# 📈 Project Statistics
-
-| Metric | Value |
-|---------|-------|
-| Programming Language | Python |
-| AI Framework | LangChain |
-| LLM | Google Gemini 2.5 Flash |
-| Embedding Model | all-MiniLM-L6-v2 |
-| Vector Database | FAISS |
-| Supported Documents | Multiple PDFs |
-| AI Features | Question Answering, Summary, Notes, Comparison, Translation |
-| Architecture | Retrieval-Augmented Generation (RAG) |
-
----
-
 # 🤝 Contributing
 
 Contributions, feature requests, and suggestions are always welcome.
@@ -764,10 +564,7 @@ It helps the project reach more developers and motivates future improvements.
 
 ---
 
-<div align="center">
 
 ### ⭐ Thank you for visiting DocMind AI!
 
 *"Transforming static documents into intelligent conversations."*
-
-</div>
