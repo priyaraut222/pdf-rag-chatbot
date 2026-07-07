@@ -4,7 +4,6 @@
 
 ### Intelligent Multi-PDF RAG Assistant powered by Google Gemini, LangChain & FAISS
 
-<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
@@ -13,7 +12,7 @@
 ![FAISS](https://img.shields.io/badge/Vector%20Database-FAISS-orange?style=for-the-badge)
 ![RAG](https://img.shields.io/badge/Architecture-RAG-success?style=for-the-badge)
 
-</p>
+
 
 ### 🚀 Chat • Summarize • Compare • Translate • Generate Notes • Export
 
