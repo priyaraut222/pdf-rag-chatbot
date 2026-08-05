@@ -229,27 +229,6 @@ J[Grounded Response]
 ✔ Responsive Streamlit Interface
 
 ---
-
-# 🧠 AI Engineering Concepts Demonstrated
-
-This project demonstrates practical implementation of modern Generative AI concepts, including:
-
-- Retrieval-Augmented Generation (RAG)
-- Semantic Search
-- Dense Vector Embeddings
-- Vector Similarity Search
-- Context Window Optimization
-- Prompt Engineering
-- Multi-document Retrieval
-- LLM Orchestration
-- Intelligent Document Chunking
-- Metadata-based Source Attribution
-- AI-powered Knowledge Retrieval
-- Context Injection using LangChain
-- End-to-End AI Application Development
-
----
-
 # 📈 End-to-End Data Flow
 
 ```text
