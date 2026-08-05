@@ -293,45 +293,6 @@ This project demonstrates practical implementation of modern Generative AI conce
           Answer + Source Citations
 ```
 
----
-
-# 🎯 Skills Demonstrated
-
-### Artificial Intelligence
-
-- Retrieval-Augmented Generation (RAG)
-- Large Language Models
-- Prompt Engineering
-- Semantic Search
-- Embedding Models
-- Context-aware AI Systems
-
-### Software Engineering
-
-- Object-Oriented Programming
-- Modular Architecture
-- API Integration
-- Error Handling
-- File Processing
-- Environment Management
-
-### Machine Learning
-
-- Sentence Embeddings
-- Vector Databases
-- Similarity Search
-- Information Retrieval
-
-### Development Tools
-
-- Git
-- GitHub
-- UV
-- Streamlit
-- Python
-
----
-
 # 📂 Project Structure
 
 ```text
@@ -355,23 +316,6 @@ DocMind-AI
 ├── README.md
 └── .env
 ```
-
----
-
-# 📈 Why Retrieval-Augmented Generation?
-
-Traditional LLMs rely solely on their pre-trained knowledge, which may result in outdated information or hallucinated responses.
-
-DocMind AI addresses this limitation using Retrieval-Augmented Generation (RAG):
-
-1. Retrieve the most relevant document chunks using semantic search.
-2. Inject only the retrieved context into the prompt.
-3. Generate grounded responses using Google Gemini.
-4. Display document citations for transparency and verification.
-
-This architecture significantly improves response relevance while reducing hallucinations.
-
----
 ---
 
 # 🚀 Installation
@@ -426,58 +370,6 @@ The application will start locally at
 http://localhost:8501
 ```
 
----
-
-
-# 📸 Application Preview
-
-## 🏠 Home Screen
-
-> *(Insert Screenshot Here)*
-
----
-
-## 💬 Chat Interface
-
-> *(Insert Screenshot Here)*
-
----
-
-## 📄 AI Summary
-
-> *(Insert Screenshot Here)*
-
----
-
-## ⚖️ PDF Comparison
-
-> *(Insert Screenshot Here)*
-
----
-
-## 📝 Study Notes
-
-> *(Insert Screenshot Here)*
-
----
-
-# 🎥 Demo
-
-> *(Insert Demo GIF Here)*
-
-Recommended:
-
-```
-demo.gif
-```
-
-Place it inside
-
-```
-assets/demo.gif
-```
-
-Then display it using
 
 ```markdown
 <p align="center">
