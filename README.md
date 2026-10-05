@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 DocMind AI
+# 🤖 Doc AI
 
 ### Intelligent Multi-PDF RAG Assistant powered by Google Gemini, LangChain & FAISS
 
@@ -24,7 +24,7 @@
 
 # 📖 Overview
 
-**DocMind AI** is an intelligent document understanding platform that transforms static PDF files into an interactive AI-powered knowledge base.
+**Doc AI** is an intelligent document understanding platform that transforms static PDF files into an interactive AI-powered knowledge base.
 
 Instead of relying on traditional keyword matching, the application performs **semantic similarity search** using **Hugging Face embeddings** and **FAISS Vector Search**, retrieving only the most relevant document chunks before passing them to **Google Gemini 2.5 Flash** for context-aware response generation.
 
